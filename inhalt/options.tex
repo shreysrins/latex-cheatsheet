@@ -1,0 +1,19 @@
+\section{Option Pricing}
+	\subsection*{Derivative Defn.}
+	Payoff $f\left(X_{T}\right)$ at $t = T$\\
+	$P = \mathbb{E}_{t}\left[f\left(X_{T}\right)\prod_{i = t + 1}^{T}\eta_{i}\right]$\\
+	$P = \sum_{\omega\in\Omega}\phi_{\omega}f\left(X_{\omega}\right)$\\
+	$P = \int\phi\left(\omega\right)f\left(X\left(\omega\right)\right)\mathrm{d}\omega$
+	
+	\subsection*{Options}
+	$\left[x\right]_{+}\equiv\max\left[0, x\right]$\\
+	$c_{1} = \left[S_{1} - K\right]_{+}, p_{1} = \left[K - S_{1}\right]_{+}$\\
+	$P_{X} = \mathbb{E}\left[\eta X\right] = \operatorname{Cov}\left[\eta, X\right] + R_{f}^{-1}\mathbb{E}\left[X\right]$\\
+	Intrinsic value, ITM/ATM/OTM;\\
+	Prices convex in $K$\\
+	$S\geq c\left(S, K\right)\geq\left[S - \frac{K}{1 + r_{f}}\right]_{+}$\\
+	$c\left(S, K\right) - p\left(S, K\right) = S - \frac{K}{1 + r_{f}}$\\
+	
+	\subsection*{Backing Out $\mathbb{Q}$}
+	$q\left(K\right) = \left.\frac{\partial^{2}c(K)}{\partial K^{2}}\middle/\int_{0}^{\infty}\frac{\partial^{2}c(K)}{\partial K^{2}}\,\mathrm{d}K\right.$
+	

@@ -1,0 +1,27 @@
+\section{Mathematics}
+	\subsection*{Expected Value}
+	$\mathbb{E}\left[X\right] = \sum_{m = 1}^{M}p_{m}X\left(\omega_{m}\right) = \int_{-\infty}^{\infty}xf_{X}\left(x\right)\mathrm{d}x$\\
+	Linearity: $\mathbb{E}\left[aX + bY\right] = a\mathbb{E}\left[X\right] + b\mathbb{E}\left[Y\right]$\\
+	Jensen's: $g$ convex $\mathbb{E}\left[g(X)\right]\geq g\left(\mathbb{E}\left[X\right]\right)$
+	
+	\subsection*{Variance}
+	$\operatorname{Cov}\left(X, Y\right) = \mathbb{E}\left[\left(X - \mathbb{E}\left[X\right]\right)\left(Y - \mathbb{E}\left[Y\right]\right)\right]$\\
+	$\operatorname{Var}\left(X\right) = \operatorname{Cov}\left(X, X\right)$\\
+	$\rho_{X, Y} = \frac{\operatorname{Cov}\left(X, Y\right)}{\sigma_{X}\sigma_{Y}}$\\
+	Billinearity, symmetry\\
+	$\operatorname{Var}\left(X + Y\right) = \operatorname{Var}\left(X\right) + \operatorname{Var}\left(Y\right) + 2\operatorname{Cov}\left(X, Y\right)$
+	
+	\subsection*{Independence}
+	$\mathbb{P}\left(X\in A, Y\in B\right) = \mathbb{P}\left(X\in A\right)\mathbb{P}\left(Y\in B\right)$\\
+	$\mathbb{E}\left[XY\right] = \mathbb{E}\left[X\right]\mathbb{E}\left[Y\right]$\\
+	$\operatorname{Cov}\left(X, Y\right) = 0$
+	
+	\subsection*{Log-normal RV}
+	$X\sim\mathcal{N}\left(\mu, \sigma^{2}\right)\implies$\\
+	$\mathbb{E}\left[\exp\left(X\right)\right] = \exp\left(\mu + \frac{\sigma^{2}}{2}\right)$
+	
+	\subsection*{Returns}
+	$1 + \underbrace{r_{t}}_{\text{Net Ret}} = \underbrace{R_{t}}_{\text{Gross Ret}}$\\
+	$I_{t} = I_{0}\prod_{t = 1}^{T}R_{t}$\\
+	$\overline{R}_{T}^{A} = \frac{1}{T}\sum_{t = 1}^{T}R_{t}$\\
+	$\overline{R}_{T}^{G} = \left(\prod_{t = 1}^{T}R_{t}\right)^{\frac{1}{T}}$

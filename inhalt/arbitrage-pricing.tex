@@ -1,0 +1,27 @@
+\section{Arbitrage Pricing}
+	\subsection*{Decomposition}
+	$r_{n,t} - r_{f} = \alpha_{n} + \beta_{n}\left(r_{-\eta,t} - r_{f}\right) + \varepsilon_{n, t}$\\
+	$\operatorname{Var}\left[r_{n} - r_{f}\right] = \beta_{n}^{2}\operatorname{Var}\left[r_{-\eta} - r_{f}\right] + \operatorname{Var}\left[\varepsilon_{n}\right]$
+	
+	\subsection*{Factors}
+	$F$ basis for $R - \overline{R}_{n}$\\
+	$R_{n} = \overline{R}_{n} + F\beta_{n}$\\
+	$\mathbb{E}^{\mathbb{Q}}\left[R_{n}\right] = R_{f}$
+	APT: $\overline{R}_{n} - R_{f} = \lambda^{\intercal}\beta_{n}$,\\
+	where $\lambda_{k} = -\mathbb{E}^{\mathbb{Q}}\left[F_{k}\right]$\\
+	$\lambda_{k}$ factor premium
+	
+	\subsection*{Diversification}
+	Portfolio $\theta$ \emph{well diversified} if\\
+	$\theta_{n} = O\left(\frac{1}{n}\right)$\\
+	Sequence $\left\{\theta_{i}\right\}$, $\left|\theta_{1}\right| = 1$\\
+	well diversified if $\exists 0<\kappa<\infty$ s.t.\\
+	$\theta_{n,j}^{2}<\frac{\kappa}{n^{2}}$.
+	
+	\subsection*{APT}
+	Asymptotic: $\mathbb{E}\left[r_{\theta_{n}}\right]\to\alpha > 0$,\\
+	but $\operatorname{Var}\left[r_{\theta_{n}}\right]\to 0$.\\
+	No asymptotic arb. $\implies\exists r_{f}, \lambda, A:$\\
+	$\sum_{i = 1}^{n}\left[\overline{r}_{i} - \left(r_{f} + \lambda^{\intercal}\beta_{i}\right)\right]^{2} =$\\
+	$\sum_{i = 1}^{n}\left[\overline{r}_{i} - \left(r_{f} + \sum_{k}\lambda_{k}\beta_{ik}\right)\right]^{2} < A < \infty$.
+	

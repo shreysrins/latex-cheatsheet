@@ -1,0 +1,35 @@
+\section{Canonical Model}
+	\subsection*{Redundancy}
+	$\exists\theta_{\setminus n}: D_{\setminus n}\theta_{\setminus n} = D_{n}$\\
+	Complete: $\forall c_{1}\in\mathbb{R}^{m}\exists\theta\in\mathbb{R}^{n}: D\theta = c_{1}$\\
+	Complete $\iff\operatorname{rank}\left(D\right) = M$
+	
+	\subsection*{Arrow-Debreu Mkt.}
+	$\phi_{\omega}$ state-contingent claim\\
+	Arrow-Debreu mkt complete
+
+	\subsection*{Risk Aversion}
+	Fair gamble: $\mathbb{E}\left[x\right] = 0$\\
+	Risk averse: $\mathbb{E}\left[u\left(w + x\right)\right]\leq\mathbb{E}\left[u\left(w\right)\right]$\\
+	Risk prem $\pi$: $u\left(w - \pi\right) = \mathbb{E}\left[u\left(w + x\right)\right]$
+	
+	\subsection*{Portfolio choice}
+	SDF $\eta = \frac{u_{1}'\left(c_{1\omega}\right)}{u_{0}'\left(c_{0}\right)} = \frac{\phi_{\omega}}{p_{\omega}}$\\
+	$\eta_{\omega}c_{1\omega}\propto 1$
+	
+	\subsection*{Euler Equation}
+	$P_{n} = \mathbb{E}\left[\frac{u_{1}'\left(c_{1}\right)}{u_{0}'\left(c_{0}\right)}D_{n}\right]$
+	
+	\subsection*{Valuation Formulas}
+	DCF/PV: $P_{n} = \phi^{\intercal}D_{n}$\\
+	Risk-Neutral $q_{\omega}\equiv\frac{\phi_{\omega}}{\sum_{\omega'}\phi_{\omega'}}$\\
+	$P_{n} = \frac{\mathbb{E}^{\mathbb{Q}}\left[D_{n}\right]}{1 + r_{f}}$\\
+	SPD/SDF: $P_{n} = \mathbb{E}^{\mathbb{P}}\left[\eta D^{n}\right]$\\
+	$R_{f} = \mathbb{E}^{\mathbb{P}}\left[\eta\right]^{-1}$
+	
+	\subsection*{Risk Premia}
+	$\mathbb{E}\left[R_{n} - R_{f}\right] = -R_{f}\operatorname{Cov}\left[\eta, R_{n} - R_{f}\right]$\\
+	Lucas: $\mathbb{E}\left[R_{n} - R_{f}\right]\approx -\gamma\operatorname{Cov}\left[R_{n}, \frac{c_{1}}{c_{0}}\right]$
+	
+	\subsection*{SPD/SDF Bounds}
+	$\frac{\sqrt{\operatorname{Var}^{\mathbb{P}}\left[\eta\right]}}{\mathbb{E}^{\mathbb{P}}\left[\eta\right]}\geq\frac{\mathbb{E}^{\mathbb{P}}\left[r_{n} - r_{f}\right]}{\sqrt{\operatorname{Var}^{\mathbb{P}}\left[r_{n} - r_{f}\right]}}$
