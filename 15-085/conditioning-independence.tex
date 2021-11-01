@@ -1,0 +1,21 @@
+\section{Conditioning \& Independence}
+
+	\subsection*{Conditional probability}
+	$\mathbb{P}\left(A\mid B\right) = \frac{\mathbb{P}\left(A\cap B\right)}{\mathbb{P}\left(B\right)}$\\
+	$\mathbb{P}_{B}\left(A\right) = \mathbb{P}\left(A\mid B\right)$\\
+	Bayes' rule: $\mathbb{P}_{A}\left(B_{i}\right) = \frac{\mathbb{P}\left(B_{i}\right)\mathbb{P}_{B_{i}}\left(A\right)}{\mathbb{P}\left(A\right)}$\\
+	$\mathbb{P}\left(\cap_{i = 1}^{\infty}A_{i}\right) = \mathbb{P}\left(A_{1}\right)\prod_{i = 2}^{\infty}\mathbb{P}\left(A_{i}\mid\cap_{j = 1}^{i - 1}A_{j}\right)$
+	
+	\subsection*{Independence}
+	Defn.: $\mathbb{P}\left(A\cap B\right) = \mathbb{P}\left(A\right)\mathbb{P}\left(B\right)$\\
+	$\mathcal{F}_{1}$, $\mathcal{F}_{2}$ $\sigma$-fields indep. iff any $A_{1}\in\mathcal{F}_{1}$ and $A_{2}\in\mathcal{F}_{2}$ indep.
+	
+	\subsection*{Borel-Cantelli lemma}
+	Sequence of events $\left\{A_{n}\right\}$,\\
+	$A = \left\{A_{n}\text{ i.o.}\right\} = \bigcap_{n = 1}^{\infty}\bigcup_{i=n}^{\infty}A_{i}$\\
+	(a) $\sum_{n = 1}^{\infty}\mathbb{P}\left(A_{n}\right) < \infty\implies\mathbb{P}\left(A\right) = 0$\\
+	(b) $\sum_{n = 1}^{\infty}\mathbb{P}\left(A_{n}\right) = \infty\implies\mathbb{P}\left(A\right) = 1$ if events $A_{n}$, $n\in\mathbb{N}$ indep.
+	
+	\subsection*{Summation lemma}
+	If $0\leq p_{i}\leq 1$, $\forall i\in\mathbb{N}$, and $\sum_{i = 1}^{\infty}p_{i} = \infty$, then $\prod_{i = 1}^{\infty}\left(1 - p_{i}\right) = 0$
+	
