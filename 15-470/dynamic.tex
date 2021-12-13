@@ -1,0 +1,51 @@
+\section{Dynamic Asset Pricing}
+	\subsection*{Model}
+	Trading dates $\mathscr{T} = \left\{0, 1, \dots, T\right\}$\\
+	Unique history's up to time $t$: $\omega_{t}$\\
+	$N + 1$ securities indexed $n = 0, \dots, N$\\
+	Security $0$ riskless, $r$ short rate process\\
+	Risky: $\delta_{n}$ dividend and ex-dividend price $S_{n}$\\
+	\emph{Trading strategies} can \emph{finance} cash flows,\\
+	cash flow \emph{marketable} iff financed by a strategy $\theta$\\
+	Self-financing: $c_{1} = c_{2} = \cdots = c_{T - 1} = 0$
+	
+	\subsection*{FTAP}
+	Positive: $X_{t}\geq 0$, $\forall t$\\
+	Strictly positive: $X_{t} > 0$, $\forall t$\\
+	Arbitrage: positive marketable cash flow, not identically 0\\
+	Strictly increasing: $\Psi:\mathscr{L}\to\mathbb{R}\iff X_{t}\geq Y_{t},\forall t\implies\Psi\left(X\right) > \Psi\left(Y\right)$\\
+	FTAP: no arbitrage $\iff\exists\Psi:\mathscr{L}\to\mathbb{R}$ linear strictly increasing s.t. $\Psi\left(c\right) = 0, \forall c\in M$\\
+	State Prices $\psi_{t}$ time-0 price of unit of consumption at $\omega_{t}$:\\
+	$-c_{0} = \mathbf{K}_{0}\sum_{t=1}^{T}\psi_{t}c_{t}$
+	
+	\subsection*{Security \& State Prices}
+	$S_{t} = \mathbf{K}_{t}\left(\sum_{s=t+1}^{T}\frac{\psi_{s}}{\psi_{t}}\delta_{s} + \frac{\psi_{T}}{\psi_{t}}S_{T}\right)$\\
+	$S_{t} = \mathbf{K}_{t}\frac{\psi_{t+1}}{\psi_{t}}\left(\delta_{t+1} + S_{t+1}\right)$
+	
+	\subsection*{State-Price Density}
+	SPD: $\pi_{t} = \frac{\psi_{t}}{p_{t}} > 0$, $\pi_{0} = \psi_{0} = 1$\\
+	$S_{t} = \mathbb{E}_{t}\left[\sum_{s=t+1}^{T}\frac{\pi_{s}}{\pi_{t}}\delta_{s} + \frac{\pi_{T}}{\pi_{t}}S_{T}\right] = \mathbb{E}\left[\frac{\pi_{t+1}}{\pi_{t}}\left(\delta_{t+1} + S_{t+1}\right)\right]$\\
+	Martingale $G_{t}^{\pi} = \pi_{t}S_{t} + \sum_{s=1}^{t}\pi_{s}\delta_{s}$
+	
+	\subsection*{Equivalent Martingale Measure}
+	$\mathbb{Q}$ s.t. $\Psi\left(c\right) = \mathbb{E}_{0}^{\mathbb{Q}}\left[\sum_{t=0}^{T}\frac{c_{t}}{S_{0,t}}\right]$\\
+	EMM: $\mathbb{Q}$ s.t. $q_{t} = p_{t}\pi_{t}S_{0,t}$
+	
+	\subsection*{Redundant Securities}
+	Cash flows can be replicated by trading strategy of other securities\\
+	Markets \emph{complete} if all cash flows replicable\\
+	$d\left(\omega_{t}\right)$: \# of time $t + 1$ nodes subsequent to $\omega_{t}$\\
+	$r\left(\omega_{t}\right)$: rank of $\left(N + 1\right)\times d\left(\omega_{t}\right)$ payoff matrix\\
+	Markets \emph{dynamically complete} if $r\left(\omega_{t}\right) = d\left(\omega_{t}\right)$\\
+	Markets dynamically complete iff state prices unique
+	
+	\subsection*{Portfolio Choice}
+	\emph{Gradient} of $U$ at $c$: $\nabla U\left(c\right)\left[\hat{c}\right]\equiv\lim_{\alpha\to\infty}\frac{U\left(c + \alpha\hat{c}\right) - U\left(c\right)}{\alpha}$\\
+	\emph{Riesz representation}: $\nabla U\left(c\right)\left[\hat{c}\right] = \mathbb{E}_{0}\left[\sum_{t=0}^{T}R_{t}\hat{c}_{t}\right]$\\
+	Equilibrium: $\nabla U\left(c^{\ast}\right) = \lambda\pi$\\
+	$U$ time-additive means $R_{t} = u'_{t}\left(c_{t}\right)$
+	
+	\subsection*{Equilibrium Asset Pricing}
+	Contingent Claims (CC) Equilibrium: $c_{i}$ optimal for agent $i$,\\
+	(market-clearing) $\sum_{i=1}^{I}c_{i} = \sum_{i=1}^{I}e_{i}$
+	

@@ -1,0 +1,45 @@
+\section{Imperfect Information}
+	\subsection*{Walrasian Equilibrium}
+	Informed and uninformed agents trading\\
+	Issue: price reveals signal of informed agents, but uninformed do not take into account
+	
+	\subsection*{Rational Expectations Equilibrium}
+	$N$ agents, utility $U^{i}$, wealth $W^{i}_{0}$, signal $s^{i}$\\
+	REE: price function $p\left(s^{1}, \dots, s^{N}\right)$ and demands $\left(x^{1}\left(p\right), \dots, x^{N}\left(p\right)\right)$ s.t.:\\
+	1) $x^{i}\left(p\right)$ solves $\max_{x}\mathbb{E}\left\{U^{i}\left[\left(W_{0}^{i} - xp\right)\left(1 + r\right) + xd\right]\mid s^{i}, p\right\}$\\
+	2) $\sum_{i=1}^{N}x^{j}\left(p\right) = S$\\
+	Equilibrium: $p = \frac{\overline{d}}{1 + r} + \frac{\beta_{s}\left(s - \overline{d}\right)}{1 + r} - \frac{S\alpha\sigma^{2}_{d\mid s}}{\left(1 + r\right)N}$\\
+	$x_{I}\left(p\right) = \frac{\overline{d} + \beta_{s}\left(s - \overline{d}\right) - \left(1 + r\right)p}{\alpha\sigma^{2}_{d\mid s}}$\\
+	$x_{U}\left(p\right) = \frac{S}{N}$
+	
+	\subsection*{Noisy REE}
+	REE with supply $S + u$, $u\sim\mathcal{N}\left(0, \sigma^{2}_{u}\right)$\\
+	Noise $u$ is liquidity demand\\
+	Constant $C = \frac{\alpha\sigma^{2}_{\varepsilon}}{N_{I}}$\\
+	$C\propto N_{I}^{-1}$; $C\propto\alpha, \sigma^{2}_{\varepsilon}$\\
+	Price informativeness $\tau = \sigma^{-2}_{d\mid p}$\\
+	$\tau\propto\sigma^{-2}_{u}, \alpha^{-1}, \sigma^{-2}_{\varepsilon}$; $\tau\propto N_{I}$\\
+	Price sensitivity $\frac{\mathrm{d}x_{U}\left(p\right)}{\mathrm{d}p} = \frac{\beta_{p} - \left(1 + r\right)}{\alpha\sigma^{2}_{d\mid p}}$
+	
+	\subsection*{Differential Information}
+	Multiple agents with signal $s^{i} = d + \varepsilon^{i}$, $\varepsilon^{i}\sim\mathcal{N}\left(0, \sigma^{2}\varepsilon\right)$\\
+	REE: $p = A + B\frac{\sum_{i=1}^{N}\left(s^{i} - \overline{d}\right)}{N}$\\
+	$\mathbb{E}\left[d\mid p\right] = \overline{d} + \beta_{p}\left(p - A\right)$\\
+	$\beta_{p} = \frac{\sigma^{2}}{B\left(\sigma^{2} + \frac{\sigma^{2}_{\varepsilon}}{N}\right)}$\\
+	$\sigma^{2}_{d\mid p} = \frac{\sigma^{2}\frac{\sigma^{2}_{\varepsilon}}{N}}{\sigma^{2} + \frac{\sigma^{2}_{\varepsilon}}{N}}$\\
+	$A = \frac{\overline{d}}{1 + r} - \frac{S\alpha\sigma^{2}_{d\mid p}}{\left(1 + r\right)N}$, $B\beta_{p} = 1 + r$
+	
+	\subsection*{Kyle Model}
+	Two periods, one risky pays $d$ at $t=1$: $d\sim\mathcal{N}\left(\overline{d}, \sigma^{2}\right)$\\
+	Price $p$ at $t = 0$, riskless rate $r = 0$\\
+	Insider (know $d$), market maker, noise traders (need quantity $u\sim\mathcal{N}\left(0, \sigma^{2}_{u}\right)$)\\
+	Insiders solve $\max_{x}\mathbb{E}\left[\left(d - p\left(x + u\right)\right)x\mid d\right]$\\
+	MM's solve $p\left(x + u\right) = \mathbb{E}\left[d\mid x + u\right]$\\
+	Sol: $x\left(d\right) = \beta\left(d - \overline{d}\right)$, $p\left(x + u\right) = \overline{d} + \lambda\left(x + u\right)$,\\
+	$\beta = \frac{\sigma_{u}}{\sigma}$, $\lambda = \frac{\sigma}{2\sigma_{u}}$
+	
+	\subsection*{Glosten-Milgrom Model}
+	$T$ periods, asset payoff $\operatorname{Bin}\left(p\right)$ at end\\
+	Informed traders (prob $\pi$), market makers, noise traders (prob $1 - \pi$)\\
+	Order size fixed at 1, History of trades $\mathscr{H}_{t}$, bid and ask prices
+	

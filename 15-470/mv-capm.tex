@@ -1,0 +1,29 @@
+\section{Mean-Variance \& CAPM}
+	\subsection*{Mean-Variance Preference}
+	Def: $\mathbb{E}\left[u\left(W\right)\right] = v\left(\overline{w}, \sigma_{w}\right)$\\
+	Quadratic utility $\implies$ MV preference
+	
+	\subsection*{Mean-Variance Frontier}
+	$\min_{x}\frac{1}{2}x^{\intercal}\Sigma x$ s.t. $\mu^{\intercal}x = \mu_{p}$, $\iota^{\intercal}x = 1$\\
+	Soln: $x = \lambda_{1}\Sigma^{-1}\iota + \lambda_{2}\Sigma^{-2}\mu$
+	
+	\subsection*{MVF Properties}
+	Linear comb. of MVF portfolios is on MVF\\
+	Set of MVF portfolios lies on a line in $R^{n}$\\
+	MVP: Minimum Variance Portfolio among all;\\
+	has $\frac{\partial\sigma_{p}^{2}}{\partial\mu_{p}} = 0$ necessary and sufficient\\
+	For any $p$, $\operatorname{Cov}\left[r_{p}, r_{mvp}\right] = \sigma^{2}_{mvp}$\\
+	For any MVF $p$, $\exists zcp$ on MVF s.t. $\operatorname{Cov}\left[r_{p}, r_{zcp}\right] = 0$\\
+	For $p$ MVF, $q$ arbitrary: $\mu_{q} - \mu_{zcp} = \beta_{qp}\left(\mu_{p} - \mu_{zcp}\right)$\\
+	$\eta^{\ast}$ projection of $\eta$ on linear payoff space: $r^{\ast} = \frac{\eta^{\ast}}{\mathbb{E}\left[\left(\eta^{\ast}\right)^{2}\right]}$
+	
+	\subsection*{Riskless Asset}
+	Sol: $x_{p} = \frac{\hat{\mu}_{p}}{\hat{\mu}^{\intercal}\Sigma^{-1}\hat{\mu}}\Sigma^{-1}\hat{\mu}$\\
+	Tangent portfolio: $x_{T} = \frac{\Sigma^{-1}\hat{\mu}}{\hat{\mu}^{\intercal}\Sigma^{-1}\iota}$\\
+	Any MVF port is mix of riskless asset and tangent port
+	Sharpe Ratio: $SR = \frac{\hat{\mu}^{\intercal}x}{\sqrt{x^{\intercal}\Sigma x}}$\\
+	Tangent port has highest SR of all risky portfolios
+	
+	\subsection*{CAPM Derivation}
+	CAPM: $\mu_{i} - r_{F} = \beta_{i,m}\left(\mu_{m} - r_{F}\right)$, $\beta_{i,m} = \frac{\operatorname{Cov}\left[r_{i}, r_{m}\right]}{\operatorname{Var}\left[r_{m}\right]}$
+	
