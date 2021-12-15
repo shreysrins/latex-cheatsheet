@@ -1,0 +1,17 @@
+\section{MGF Applications}
+	\subsection*{Random Walks}
+	Can apply MGFs to calculate probability and time to return
+
+	\subsection*{Branching Processes}
+	$Z_{n}$: indivs in $n^{\text{th}}$ gen,\\
+	$g$ is PGF of dist. $F$, $X\stackrel{d}{=}F$,\\
+	$g\left(s\right) = \sum_{m\geq 0}s^{m}\mathbb{P}\left(X = m\right)$.\\
+	$G_{n}$ is PGF of $Z_{n}$, $\mathbb{E}\left[X\right] = \mu$, $\operatorname{Var}\left(X\right) = \sigma^{2}$, $G_{n} = g^{\left(n\right)}$, $\forall n\geq 0$.\\
+	$\mathbb{E}\left[Z_{n}\right] = \mu^{n}$,\\
+	$\operatorname{Var}\left(Z_{n}\right) =
+		\begin{cases}
+			n\sigma^{2}, & \mu = 1;\\
+			\frac{\sigma^{2}\left(\mu^{n - 1}\right)\mu^{n - 1}}{\mu - 1} & \mu\neq 1.
+		\end{cases}$\\
+	If $\mu < 1$, $Z_{n}\to 0$, $\mathbb{P}\left(Z_{n} > 0\right) < \mu^{n}$.
+	Pr. extinction $\eta$ smallest root of $s = g\left(s\right)$; $\eta = 1$ in many cases.

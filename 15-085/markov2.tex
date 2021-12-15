@@ -1,0 +1,20 @@
+\section{Markov Chains II}
+	\subsection*{Single Recurrence Class}
+	$\leftrightarrow$ is an equivalency relation: recurrent states form classes $R_{1}, \dots, R_{r}$. $\mathcal{T}$ transient states.\\
+	$\forall l = 1, \dots, r$, $\forall i\in R_{l}, j\notin R_{l}$: $p_{i, j} = 0$
+	Let $T_{i} = \min\left\{n\geq 1: X_{n} = i\mid X_{0} = i\right\}$ first passage time; $\mu_{i} = \mathbb{E}\left[T_{i}\right]$ mean recurrence time.\\
+	$\forall i\in\mathcal{T}: \mathbb{P}\left(X_{n} = i,\text{i.o.}\right) = 0$, $\mu_{i} = \infty$.\\
+	Irreducible: $\mathcal{X} = \mathcal{T}\cup R$ and $\mathcal{T} = \emptyset$.
+	
+	\subsection*{Uniqueness of $\pi$}
+	If single recurrence class, $\pi$ unique.\\
+	Furthermore, $\pi_{i} = \mu_{i}^{-1}$, $\forall i$.\\
+	If $i$ recurrent, $\pi_{i} > 0$.
+	
+	\subsection*{Ergodic Theorem}
+	Let $N_{i}\left(t\right)$ be \# of times state $i$ visited during times $0, 1, \dots t$.\\
+	For arbitrary starting $X_{0} = k$, $\forall i$, $\lim_{t\to\infty}\frac{N_{i}\left(t\right)}{t} = \pi_{i}$ a.s.\\
+	$\lim_{t\to\infty}\frac{\mathbb{E}\left[N_{i}\left(t\right)\right]}{t} = \pi_{i}$.
+	
+	\subsection*{Multiple Recurrence Classes}
+	$r$ stationary distributions where $\forall 1\leq i\leq r$: $\pi_{k}^{i} = 0$ if $k\notin R_{i}$ and $\pi_{k}^{i} = \mu_{k}^{-1}$ if $k\in R_{i}$.

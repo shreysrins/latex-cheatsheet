@@ -1,0 +1,19 @@
+\section{Markov Chains III}
+	\subsection*{Periodicity}
+	$\forall x\in\bigcup R_{i}$, $I_{x} = \left\{n\geq 1: p_{x,x}^{(n)} > 0\right\}$\\
+	$d_{x}$ period is GCD of $I_{x}$ numbers\\
+	States in same recurrence class have same period\\
+	Periodic: $d_{x} > 1$;\\
+	Aperiodic: $d_{x} = 1$\\
+	$d_{y} = 1\implies\exists N\geq 1: p_{y,y}^{(n)} > 0, \forall n\geq N$.
+	
+	\subsection*{Coupling \& Mixing}
+	Irreducible aperiodic MC: $\forall x, y\in\mathcal{X}: \lim_{n\to\infty}p_{x,y}^{(n)} = \pi_{y}$.\\
+	Irreducible aperiodic reversible MC: $\exists C: \forall x, y\in\mathcal{X}: \left|p_{x,y}^{(n)} - \pi_{y}\right|\leq C\left|\lambda_{2}\right|^{n}$, where $\lambda_{2}$ second largest (absolute value) eigenvalue of $\mathbf{P}$.\\
+	Coupling: $X_{n}$ MC on $\left\{1, \dots, N\right\}$ and $Y_{n}$ MC on $\left\{1, \dots, M\right\}$ with $\mathbf{P}$, $\mathbf{Q}$, respectively. Can create $Z_{n}$ MC on $\left\{1, \dots, N\right\}\times\left\{1, \dots, M\right\}$ with transition $R = \left\{r_{\left(x_{1},x_{2}\right),\left(y_{1}, y_{2}\right)}\right\}$.\\
+	Moves in each direction with same probability matrices.\\
+	Coupling behaves as above until collision---then transition the same.
+	
+	\subsection*{Absorbtion Probability}
+	Assume recurrent states $i$ absorbing, i.e., $p_{i,i} = 1$.\\
+	Absorbing probability: $a_{ki} = \mathbb{P}\left(X_{n} = i\text{ eventually}\mid X_{0} = k\right)$.

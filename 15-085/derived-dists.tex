@@ -1,0 +1,17 @@
+\section{Derived Dist.'s}
+
+	\subsection*{Func. of Single RV}
+	If $Y = g(X)$, calculate $F_{Y}\left(y\right) = \mathbb{P}\left(g\left(X\right)\leq y\right) = \int_{\left\{x\mid g(x)\leq y\right\}}\!f_{X}\left(x\right)\mathrm{d}x$\\
+	Then $f_{Y}\left(y\right) = \frac{\mathrm{d}F_{Y}}{\mathrm{d}y}\left(y\right)$
+	
+	\subsection*{Multivariate}
+	$f_{Y}\left(y\right) = f_{X}\left(M^{-1}y\right)\cdot\left|M^{-1}\right|$
+	
+	\subsection*{Max \& Min of RV's}
+	$\mathbb{P}\left(\max_{j}X_{j}\leq x\right) = F_{X_{1}}\left(x\right)\cdots F_{X_{n}}\left(x\right)$\\
+	$\mathbb{P}\left(\min_{j}X_{j}\leq x\right) = 1 - \left(1 - F_{X_{1}}\left(x\right)\right)\cdots\left(1 - F_{X_{n}}\left(x\right)\right)$
+	
+	\subsection*{Convolution}
+	$p_{X + Y}\left(z\right) = \sum_{x}p_{X}\left(x\right)p_{Y}\left(z - x\right)$\\
+	$f_{X+Y}\left(z\right) = \int_{-\infty}^{\infty}\!f_{X,Y}\left(x,z-x\right)\mathrm{d}x$
+	

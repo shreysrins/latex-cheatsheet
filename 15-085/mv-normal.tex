@@ -1,0 +1,18 @@
+\section{Multivariate Normal Dist.}
+	\subsection*{Positive Definite}
+	$A$ is $n\times n$ symmetric matrix\\
+	$A > 0\iff x^{\intercal}Ax > 0$, $\forall x\in\mathbb{R}^{n}$,\\
+	$A\geq 0\iff x^{\intercal}Ax\geq 0$, $\forall x\in\mathbb{R}^{n}$.\\
+	Symmetric: $n$ real eigenvalues; Pos Defn.: $n$ real positive eigenvalues; Nonnegative Defn.: $n$ real nonnegative eigenvalues.\\
+	Symmetric matrices are diagonalizable
+	
+	\subsection*{Multivariate Normal Dist.}
+	Defn. of mv normal:\\
+	$f_{X}\left(\mathbf{x}\right) = \frac{1}{\sqrt{\left(2\pi\right)^{n}\left|V\right|}}\exp\left\{-\frac{\left(\mathbf{x} - \mu\right)V^{-1}\left(\mathbf{x} - \mu\right)^{\intercal}}{2}\right\}$;\\
+	$\mathbf{X} = D\mathbf{W} + \mu$, $W_{ij}\sim\mathcal{N}\left(0, 1\right)$;\\
+	$\forall\mathbf{a}\in\mathbb{R}^{n}$: $\mathbf{a}^{\intercal}\mathbf{X}\sim\mathcal{N}\left(\mu, \sigma^{2}\right)$\\
+	Factorization: convert $X_{i}$ to $W_{i}$\\
+	$W_{1} = X_{1}$,\\
+	$W_{2} = X_{2} - \mathbb{E}\left[X_{2}\mid X_{1}\right]$,\\
+	$W_{n} = X_{n} - \mathbb{E}\left[X_{n}\mid X_{1},\dots,X_{n-1}\right]$
+	

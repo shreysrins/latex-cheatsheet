@@ -1,0 +1,10 @@
+\section{LLN II}
+	\subsection*{Strong LLN}
+	$\left\{X_{n}\right\}$ sequence of RV's\\
+	(i) $\sum_{n=1}^{\infty}\mathbb{E}\left[\left|X_{n}\right|^{s}\right] < \infty$, $s > 0$ $\implies X_{n}\stackrel{\text{a.s.}}{\to}0$\\
+	(ii) $\sum_{n=1}^{\infty}\mathbb{P}\left(\left|X_{n}\right| > \varepsilon\right) < \infty$, $\forall\varepsilon > 0$ $\implies  X_{n}\stackrel{\text{a.s.}}{\to}0$\\
+	LLN: $X, X_{1}, X_{2}, \dots$ i.i.d., $\mathbb{E}\left[\left|X\right|\right] < \infty$, $S_{n}$ sum $\implies S_{n}/n\stackrel{\text{a.s.}}{\to}\mathbb{E}\left[X\right]$.
+	
+	\subsection*{Chernoff Bound}
+	If $\mathbb{E}\left[\exp\left(sX\right)\right] < \infty$ for some $s > 0$, and $a > 0$, then $\mathbb{P}\left(S_{n}\geq na\right)\leq\exp\left(-n\phi\left(a\right)\right)$, where $\phi\left(a\right) = \sup_{s\geq 0}\left(sa - \ln M_{X}\left(s\right)\right)$.\\
+	If $X$ continuous and boundless, $\lim_{n\to\infty}n^{-1}\mathbb{P}\left(S_{n}\geq na\right) = -\phi\left(a\right)$.

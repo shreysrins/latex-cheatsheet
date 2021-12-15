@@ -1,0 +1,17 @@
+\section{Convergence}
+	\subsection*{Definition}
+	Almost surely: $X_{n}\stackrel{\text{a.s.}}{\to}X$ if $\exists A\subset\Omega$:\\
+	(a) $\lim_{n\to\infty}X_{n}\left(\omega\right) = X\left(\omega\right)$, $\forall\omega\in A$,\\
+	(b) $\mathbb{P}\left(A\right) = 1$.\\
+	Dist: $X_{n}\stackrel{\text{d}}{\to}X$ if ($F$ and $F_{n}$ CDFs)\\
+	$\lim_{n\to\infty}F_{n}\left(x\right) = F\left(x\right),$ $\forall x\in\mathbb{R}$.\\
+	Prob: $X_{n}\stackrel{\text{i.p.}}{\to}X$ if ($\forall\varepsilon > 0$)\\
+	$\lim_{n\to\infty}\mathbb{P}\left(\left|X_{n} - X\right|\geq\varepsilon\right) = 0$.
+	
+	\subsection*{Hierarchy}
+	Each implies the next:\\
+	i) Almost Surely\\
+	ii) In Probability\\
+	ii) In Distribution\\
+	iv) $\phi_{X_{n}}\left(t\right)\to\phi_{X}\left(t\right), \forall t$\\
+	Last one holds in reverse

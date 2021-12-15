@@ -1,0 +1,12 @@
+\section{LLN \& CLT}
+	\subsection*{Inequalities}
+	Markov: $\mathbb{P}\left(X\geq a\right)\leq\frac{\mathbb{E}\left[X\right]}{a}$\\
+	Chebyshev: extends Markov $\mathbb{P}\left(\left|X - \mathbb{E}\left[X\right]\right|\geq\varepsilon\right)\leq\frac{\operatorname{Var}\left(X\right)}{\varepsilon^{2}}$
+	
+	\subsection*{Weak LLN}
+	$X_{n}$ i.i.d., $\mathbb{E}\left[\left|X_{1}\right|\right] < \infty$, $S_{n}$ sum\\
+	$\frac{S_{n}}{n}\stackrel{\text{i.p.}}{\to}\mathbb{E}\left[X_{1}\right]$; Strong LLN a.s.
+	
+	\subsection*{CLT}
+	$X_{n}$ i.i.d., mean $\mu$, var $\sigma^{2}$, $S_{n}$ sum\\
+	$\frac{S_{n} - n\mu}{\sigma\sqrt{n}}\stackrel{\text{d}}{\to}X\sim\mathcal{N}\left(0, 1\right)$

@@ -4,5 +4,20 @@
 	(a) $X: \Omega\to\mathbb{R}$ s.t. $\left\{\omega\mid X\left(\omega\right)\leq c\right\}$ $\mathcal{F}$-measurable $\forall c\in\mathbb{R}$\\
 	(b) Extended-valued r.v. if $\forall c\in\overline{\mathbb{R}} = \mathbb{R}\cup\left\{\pm\infty\right\}$\\
 	$X^{-1}\left(B\right) = \left\{X\in B\right\} = \left\{\omega\mid X\left(\omega\right)\in B\right\}$\\
-	Prob. law: $\mathbb{P}_{X}: \mathcal{B}\to\left[0, 1\right]$, $B\mapsto\mathbb{P}\left(X\in B\right)$ (measure on $\left(\mathbb{R}, \mathcal{B}\right)$)
+	Prob. law: $\mathbb{P}_{X}: \mathcal{B}\to\left[0, 1\right]$, $B\mapsto\mathbb{P}\left(X\in B\right)$ (measure on $\left(\mathbb{R}, \mathcal{B}\right)$)\\
+	$\left(\mathcal{F}_{1}, \mathcal{F}_{2}\right)$-measurable func.: $f: \Omega_{1}\to\Omega_{2}$ s.t. $f^{-1}\left(B\right)\in\mathcal{F}_{1}, \forall B\in\mathcal{F}_{2}$\\
+	For $A\in\mathcal{F}$, $I_{A}$ is $\left(\mathcal{F}, \mathcal{B}\right)$-measurable
+	
+	\subsection*{CDFs}
+	Defn.: $F_{X}: \mathbb{R}\to\left[0, 1\right]$, $x\mapsto\mathbb{P}\left(X\leq x\right)$\\
+	(a) Monotonicity\\
+	(b) $\lim_{x\to-\infty}F_{X}\left(x\right) = 0$, $\lim_{x\to\infty}F_{X}\left(x\right) = 1$\\
+	(c) Right-continuity
+	
+	\subsection*{Discrete RV's}
+	Range $X\left(\Omega\right)$ finite/countable\\
+	$p_{X}: \mathbb{R}\to\left[0, 1\right]$, $x\mapsto\mathbb{P}\left(X = x\right)$ PMF
+	
+	\subsection*{Continuous RV's}
+	$F_{X}\left(x\right) = \int_{-\infty}^{x}\!f(t)\mathrm{d}t$, $f$ PDF
 	

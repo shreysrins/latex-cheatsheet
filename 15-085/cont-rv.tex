@@ -1,0 +1,19 @@
+\section{Continuous RV's}
+
+	\subsection*{Examples}
+	Uniform: $F_{X}\left(x\right) = \frac{x - a}{b - a}$\\
+	Exponential: $F_{X}\left(x\right) = 1 - e^{-\lambda x}$\\
+	Normal: $f_{X}\left(x\right) = \frac{1}{\sigma\sqrt{2\pi}}\exp\left(-\frac{\left(x - \mu\right)^{2}}{2\sigma^{2}}\right)$\\
+	Cauchy: $f_{X}\left(x\right) = \frac{1}{\pi\left(1 + x^{2}\right)}$\\
+	Power law: $f_{X}\left(t\right) = \frac{\alpha c^{\alpha}}{t^{\alpha + 1}}$
+	
+	\subsection*{Exp. Value}
+	$\mathbb{E}\left[X\right] = \int_{0}^{\infty}\left(1 - F_{X}\left(t\right)\right)\mathrm{d}t$ for $X$ non-negative
+	
+	\subsection*{Joint Dist.'s}
+	$F_{X,Y} = \mathbb{P}\left(X\leq x, Y\leq y\right)$\\
+	$f_{X}\left(x\right) = \int_{-\infty}^{\infty}\!f_{X,Y}\left(x,y\right)\mathrm{d}y$
+	
+	\subsection*{Independence}
+	$F_{X,Y} = F_{X}(x)F_{Y}(y)$
+	

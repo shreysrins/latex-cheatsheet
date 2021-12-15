@@ -1,0 +1,15 @@
+\section{Moment Generating Functions}
+	\subsection*{MGF's}	
+	$M_{X}\left(s\right) = \mathbb{E}\left[\exp\left(sX\right)\right]$\\
+	Domain $D_{x} = \left\{s\mid M_{x}\left(s\right) < \infty\right\}$\\
+	Inversion Thm: if $M_{X}\left(s\right) = M_{Y}\left(s\right)$, $\forall\left|s\right|\leq a$, then $F_{X} = F_{Y}$\\
+	Probability GF: $g_{X}\left(s\right) = \mathbb{E}\left[s^{X}\right]$\\
+	$\left.\frac{\mathrm{d}}{\mathrm{d}s}g_{X}\left(s\right)\right|_{s=1} = \mathbb{E}\left[X\right]$\\
+	$Y = aX + b\implies M_{Y}\left(s\right) = e^{sb}M_{X}\left(as\right)$\\
+	$X$ and $Y$ indep.: $M_{X+Y}\left(s\right) = M_{X}\left(s\right)M_{Y}\left(s\right)$\\
+	If $\mathbb{P}\left(Z = X\right) = p$ and $\mathbb{P}\left(Z = Y\right) = 1 - p$,\\
+	$M_{Z}\left(s\right) = pM_{x}\left(s\right) + \left(1 - p\right)M_{Y}\left(s\right)$
+	
+	\subsection*{Sum of RVs}
+	Law of Total Variance: $\operatorname{Var}\left(Y\right) = \mathbb{E}\left[\operatorname{Var}\left(Y\mid X\right)\right] + \operatorname{Var}\left(\mathbb{E}\left[Y\mid X\right]\right)$
+	

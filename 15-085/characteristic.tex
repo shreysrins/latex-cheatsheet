@@ -1,0 +1,11 @@
+\section{Characteristic Functions}
+	\subsection*{Basics}
+	$\phi_{X}\left(t\right) = \mathbb{E}\left[e^{itX}\right]$\\
+	Can use $e^{ix} = \cos\left(x\right) + i\sin\left(x\right)$\\
+	Invertible for all RV's:\\
+	$f_{X}\left(x\right) = \frac{1}{2\pi}\lim_{T\to\infty}\int_{-T}^{T}\!e^{-itx}\phi_{X}\left(t\right)\!\mathrm{d}x$\\
+	$\lim_{n\to\infty}X_{n} = X\implies\lim_{n\to\infty}\phi_{X_{n}}\left(t\right) = \phi_{X}\left(t\right)$\\
+	$\mathbb{E}\left[\left|X\right|^{k}\right] < \infty\implies\left.\frac{\mathrm{d}^{k}}{\mathrm{d}t^{k}}\phi_{X}\!\left(t\right)\right|_{t=0} = i^{k}\mathbb{E}\left[X^{k}\right]$\\
+	Exponential: $\phi_{X}\left(t\right) = \frac{\lambda}{\lambda - it}$\\
+	Normal: $\phi_{X}\left(t\right) = \exp\left(it\mu - \frac{t^{2}\sigma^{2}}{2}\right)$
+	

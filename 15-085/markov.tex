@@ -1,0 +1,14 @@
+\section{Markov Chains}
+	\subsection*{Basics}
+	Process takes values in countable $\mathcal{X}$, probability $X_{n} = x_{n}$ only conditioned on $X_{n - 1} = x_{n - 1}$\\
+	Homogeneous: constant transition matrix $\mathbf{P}$;\\
+	$p_{i,j} = \mathbb{P}\left(X_{n+1} = j\mid X_{n} = i\right)$ s.t.\\
+	$\sum_{j}p_{i,j} = 1$, $\forall i$---stochastic matrix
+	
+	\subsection*{Stationary Distribution}
+	$\pi$ stationary iff $\pi^{\intercal} = \pi^{\intercal}\mathbf{P}$\\
+	Every finite state Markov chain has at least 1 stationary distribution
+	
+	\subsection*{State Classification}
+	Transient: $i$ s.t. $\exists j: i\to j, j\not\to i$.
+	Recurrent: $i$ not transient.

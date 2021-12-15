@@ -1,0 +1,15 @@
+\section{Abstract Integration II}
+	
+	\subsection*{Fatou's Lemma}
+	$Y$ s.t. $\mathbb{E}\left[\left|Y\right|\right] < \infty$:
+	(a) If $Y\leq X_{n}\forall n$, then $\mathbb{E}\left[\liminf_{n\to\infty}X_{n}\right]\leq\liminf_{n\to\infty}\mathbb{E}\left[X_{n}\right]$\\
+	(b) If $X_{n}\leq Y\forall n$, then $\mathbb{E}\left[\limsup_{n\to\infty}X_{n}\right]\geq\limsup_{n\to\infty}\mathbb{E}\left[X_{n}\right]$
+	
+	\subsection*{Dominated Convergence Theorem}
+	Sequence $\left\{X_{n}\right\}$ converges to $X$ a.e.\\
+	Suppose $\left|X_{n}\right|\leq Y$, $\forall n$,\\
+	$Y\geq 0$ with $\mathbb{E}\left[Y\right] < \infty$.\\
+	Then: $\lim_{n\to\infty}\mathbb{E}\left[X_{n}\right] = \mathbb{E}\left[X\right]$.\\
+	Corollary: if $\sum_{n=1}^{\infty}\mathbb{E}\left[\left|Z_{n}\right|\right] < \infty$,\\
+	$\sum_{n=1}^{\infty}\mathbb{E}\left[Z_{n}\right] = \mathbb{E}\left[\sum_{n=1}^{\infty}Z_{n}\right]$.
+	
