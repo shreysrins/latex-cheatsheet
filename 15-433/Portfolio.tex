@@ -1,0 +1,29 @@
+\section{Portfolio}
+	\subsection*{Theory}
+	Solve using Lagrange multipliers\\
+	Black-Litterman Model: express views in portfolio\\
+	1) Expected ExRet $\vec{R}\sim\mathcal{N}\left(\vec{\pi}, \tau\mathbf{\Sigma}\right)$\\
+	2) View $\mathbf{P}^{\intercal}\vec{R} = \vec{Q} + \vec{\varepsilon}$; $\vec{\varepsilon}\mid\vec{R}\sim\mathcal{N}\left(0, \mathbf{\Omega}\right)$\\
+	3) $\mathbb{E}\left[\vec{R}\right] = \left[\left(\tau\mathbf{\Sigma}\right)^{-1} + \mathbf{P}\mathbf{\Omega}^{-1}\mathbf{P}^{\intercal}\right]^{-1}\times\left[\left(\tau\mathbf{\Sigma}\right)^{-1}\vec{\pi} + \mathbf{P}\mathbf{\Omega}^{-1}\vec{Q}\right]$,\\ $\operatorname{Var}\left(\vec{R}\right) = \left[\left(\tau\mathbf{\Sigma}\right)^{-1} + \mathbf{P}\mathbf{\Omega}^{-1}\mathbf{P}^{\intercal}\right]^{-1}$\\
+	\underline{\textbf{Black-Litterman Example}}\\
+	$\vec{\mu}$: expected ExRet; $\mathbf{\Sigma}$: cov matrix\\
+	Investor maximizes $\vec{w}^{\intercal}\vec{\mu} - \frac{1}{2}\delta\vec{w}^{\intercal}\mathbf{\Sigma}\vec{w}$\\
+	Soln: $\vec{\mu} = \delta\mathbf{\Sigma}\vec{w}^{\ast}$, or $\vec{w}^{\ast} = \left(\delta\Sigma\right)^{-1}\vec{\mu}$\\
+	Equilibrium: $\vec{\mu}_{\text{eq}} = \delta\mathbf{\Sigma}\vec{w}_{\text{eq}}$\\
+	Adding view: create L/S portfolio $P$ with expected return $Q$ and variance $\Sigma$; calculate new expected ExRet and cov matrix following formulas for $\vec{R}$ above\\
+	$\delta$: risk-aversion; $\tau$ inv prop to confidence in consensus
+	
+	\subsection*{Robust Construction}
+	Equal Weighting portfolios: perform well OOS\\
+	Risk Parity portfolios: equate risk of assets\\
+	Factor cov matrix $F$ from factor model,\\
+	$\hat{\mathbf{\Sigma}} = \vec{B}^{\intercal}\operatorname{Var}\left(\vec{F}\right)\vec{B} + \mathbf{U}$.\\
+	Shrinkage: target theoretical cov matrix $\mathbf{\Phi}$, $\alpha\in\left[0, 1\right]$,\\
+	$\hat{\mathbf{\Sigma}} = \alpha\mathbf{\Phi} + \left(1 - \alpha\right)\Sigma$,\\
+	optimal $\alpha\approx\frac{1}{T}$.
+	
+	\subsection*{Dynamic Considerations}
+	Rebalancing induces transaction costs\\
+	Long-run weights not same as short-term\\
+	Long-run weight = Short-run weight + Opportunistic weight
+	

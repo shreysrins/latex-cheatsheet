@@ -1,0 +1,30 @@
+\section{Fixed Income}
+	\subsection*{Treasury Market [1]}
+	Federal Reserve: 12 FOMC members, 8 annual meetings, 5 regional presidents\\
+	Dual Mandate: price stability \& maximum sustainable employment\\
+	Inflation Target: 2\%, achieve through monetary policy\\
+	Holding period return: $\frac{P_{t} + D_{t}}{P_{t-1}} - 1$\\
+	Modified Duration: $-\frac{1}{P}\cdot\frac{\mathrm{d}P}{\mathrm{d}y}$\\
+	Price sensitivity to yield: $\frac{\Delta P}{P}\approx -\text{MD}\cdot\Delta y$\\
+	DV01: Dollar Value per 01 bp change in yield\\
+	Convexity: $\frac{\Delta P}{P}\approx -\text{MD}\cdot\Delta y + \frac{1}{2}\cdot C\cdot\left(\Delta y\right)^{2}$\\
+	PCA: orthogonal factors explaining data\\
+	PC1: level; PC2: slope; PC3: curvature\\
+	Bond excess returns: $y_{t}^{(n)}$ continuously compounded yield of zero-coupon bond with maturity $n$ periods at time $t$\\
+	Carry: $y_{t}^{(n)} - y_{t}^{(1)}$\\
+	Capital gain: $-\left(n - 1\right)\left(y_{t+1}^{(n-1)} - y_{t}^{(n)}\right)$
+	
+	\subsection*{Treasury Market [2]}
+	Repurchase Agreement: (overnight) loan secured by Treasury bond; interest rate: repo rate.\\
+	Bond Return over financing cost: $\approx\left[\operatorname{YTM}_{t}\left(T - t\right) - \text{Repo}_{t}\right]\times\Delta t - \text{MD}_{t}\times\left[\operatorname{YTM}_{t+\Delta t}\left(T - t - \Delta t\right) - \operatorname{YTM}_{t}\left(T - t\right)\right]$\\
+	Strategies: duration-neutral positions immune to level shifts\\
+	On-the-run: newly issued, most liquid, special repo rate\\
+	Off-the-run: old securities, worse liquidity, often cheaper
+	Run trade: $\text{PnL} = \Delta\text{YTM}\times\Delta t - \Delta\text{Repo}\times\Delta t - \overline{D}\times\Delta\text{YTM}$
+	
+	\subsection*{Corporate Bond Market}
+	Investment grade: rating BBB- or above\\
+	High yield/speculative grade/junk: BB+ or below\\
+	Loss given default (LGD) = 1 - recovery rate\\
+	Expected default loss = Default probability $\times$ LGD\\
+	Credit spread = Risk-neutral default probability $\times$ LGD

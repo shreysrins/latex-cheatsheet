@@ -1,0 +1,68 @@
+\section{Equity}
+	\subsection*{CAPM}
+	$\mathbb{E}\left[r_{it}\right] - r_{f} = \beta_{iM}\left(\mathbb{E}\left[r_{Mt}\right] - r_{f}\right)$\\
+	Assumptions: mean-variance agents, one period investment horizon, no information asymmetry, risk-free rate $r_{f}$, only financial wealth, no taxes and TC\\
+	CAPM doesn't hold empirically
+	
+	\subsection*{Cross Section [1]}
+	Portfolio sorting: in each period, sort stocks into $K$ portfolios; track realized returns at $t = 1$; repeat over time.\\
+	Size: market cap (right skewed)\\
+	Value: Book/Market Equity ratio\\
+	Fama-French 3 Factor Model: $\mathbb{E}\left[r_{it}\right] - r_{f} = \alpha_{i} + \beta_{i}\left(\mathbb{E}\left[r_{Mt}\right] - r_{f}\right) + s_{i}\text{SMB}_{t} + h_{i}\text{HML}_{t} + \varepsilon_{it}$\\
+	SMB: Small-minus-Big (size factor)\\
+	HML: High-minus-Low (value factor)\\
+	Momentum: trend in returns\\
+	WML: Winners-minus-Losers (momentum factor, Carhart Model)
+	
+	\subsection*{Econometrics}
+	Model: $y_{t} = x_{t}\beta + u_{t}$\\
+	OLS: $\hat{\beta} = \left(\mathbf{X}^{\intercal}\mathbf{X}\right)^{-1}\mathbf{X}\mathbf{y}$\\
+	Std. Error: $\sqrt{\operatorname{Var}\left(\hat{\beta}\middle|\mathbf{X}\right)}$ very messy\\
+	$u_{i}$ uncorrelated and homoskedastic: std. error $\sigma_{u}\left(\mathbf{X}^{\intercal}\mathbf{X}\right)^{-1/2}$\\
+	$u_{i}$ heteroskedastic: use White Standard Errors\\
+	$u_{i}$ serially correlated: use Newey-West Standard Errors\\
+	$t$-stat: $\left|\frac{\hat{\beta}}{\operatorname{Var}\left(\hat{\beta}\middle|\mathbf{X}\right)}\right| > 2$ significant\\
+	Panel data: time-series and cross-sectional data\\
+	Fama-MacBeth Regression: i) run cross-section regression for each $t$; ii) estimate $\hat{\beta}_{FM} = \frac{1}{T}\sum_{t}\hat{\beta}_{t}$\\
+	Adjust with Newey-West std. errors for time-series correlation\\
+	Accounts for cross-sectional correlation within time periods
+	
+	\subsection*{Cross Section [2]}
+	Systematic risk: positive risk premium (theory)\\
+	Idiosyncratic risk: 0 risk premium (theory)\\
+	Idiosyncratic vol and negative returns correlated\\
+	Betting against Beta (BAB) strategy\\
+	Five Factor Model: add RMW \& CMA\\
+	RMW: Robust-minus-Weak (profit factor)\\
+	CMA: Conservative-minus-Aggressive (investment factor)\\
+	Factors must have economic meaning
+	
+	\subsection*{Performance Evaluation}
+	Information Ratio: $IR = \frac{\mathbb{E}\left[R - R_{b}\right]}{\sigma\!\left(R - R_{b}\right)}$\\
+	$R_{b}$ benchmark, $R_{b} = 0$ cash benchmark common\\
+	Sharpe Ratio: $IR$ with benchmark $r_{f}$\\
+	High Water Mark: $HWM_{t} = \max_{s\leq t} P_{s}$\\
+	Drawdown: $DD_{t} = \max\left\{\frac{HWM_{t} - P_{t}}{HWM_{t}}, 0\right\}$\\
+	Maximum Drawdown: $MDD_{T} = \max_{t\leq T}DD_{t}$
+	
+	\subsection*{Time Series}
+	Common model $r_{t+1} = \alpha + \beta x_{t} + \varepsilon_{t}$, correlated error terms need Newey-West adjustment\\
+	OOS $R^{2}$: $R^{2}_{OS} = 1 - \frac{\sum_{t=1}^{T}\left(r_{t} - \hat{r}_{t}\right)^{2}}{\sum_{t=1}^{T}\left(r_{t} - \overline{r}_{t}\right)^{2}}$ where $\overline{r}_{t} = \frac{1}{t-1}\sum_{j=1}^{t-1}r_{j}$ and $\hat{r}_{t}$ predicted\\
+	Need historical data before start of forecast $t = 1$\\
+	$R^{2}_{OS} > 0$: predictor performs better than historical avg OOS,\\
+	$R^{2}_{OS} < 0$: implies otherwise.\\
+	Cum. SSE Diff.: $\sum_{t=1}^{T}\left(r_{t} - \overline{r}_{t}\right)^{2} - \sum_{t=1}^{T}\left(r_{t} - \hat{r}_{t}\right)^{2}$
+	
+	\subsection*{Market Structure}
+	Exchanges: 13 (NYSE, NASDAQ, CBOE)\\
+	Open/Close auctions, continuous limit order books (CLOBs)\\
+	Best Bid, Best Ask/Offer, ``mid''\\
+	Bid-ask spread = best offer - best bid\\
+	Determinants: adverse selection, fixed costs, inventory costs, market power\\
+	NBBO (Natl Best Bid \& Offer): across exchanges\\
+	Effective cost/spread: diff between execution price and price before (mid)\\
+	Realized cost: diff between execution price and price after (mid)\\
+	VWAP: Volume-Weighted Average Price\\
+	Implementation Shortfall: performance on paper - real\\
+	Dark pools: 15\% equity volume, trade within NBBO\\
+	Payment for Order Flow: retail execution

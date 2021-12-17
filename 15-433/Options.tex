@@ -1,0 +1,29 @@
+\section{Options}
+	\subsection*{Options [1]}
+	Black-Scholes-Merton: spot price $S_{0}$, maturity $T$, strike price $K$, interest rate $r$, volatility $\sigma$\\
+	$C = S_{0}\Phi\!\left(d_{1}\right) - Ke^{-rT}\Phi\!\left(d_{2}\right)$,\\
+	$d_{1} = \frac{\ln\!\left(\frac{S}{K}\right) + \left(r + \frac{\sigma^{2}}{2}\right)T}{\sigma\sqrt{T}}$,\\
+	$d_{2} = \frac{\ln\!\left(\frac{S}{K}\right) + \left(r - \frac{\sigma^{2}}{2}\right)T}{\sigma\sqrt{T}}$\\
+	Put-Call Parity: $C - P = S_{0} - Ke^{-rT}$\\
+	Derivation from price movement:\\
+	$\frac{\mathrm{d}S_{t}}{S_{t}} = r\mathrm{d}t + \sigma\mathrm{d}B_{t}$\\
+	$S_{T} = S_{0}\exp\left(\left(r - \frac{\sigma^{2}}{2}\right)T + \sigma B_{T}\right)$\\
+	Value $\mathbb{E}^{\mathbb{Q}}\left[e^{-rT}\max\left(S_{T} - K, 0\right)\right]$\\
+	BSM with continuous dividend yield $\delta$:\\
+	$C = S_{0}e^{-\delta T}\Phi\!\left(d_{1}\right) - Ke^{-rT}\Phi\!\left(d_{2}\right)$,\\
+	$d_{1} = \frac{\ln\!\left(\frac{S}{K}\right) + \left(r - \delta + \frac{\sigma^{2}}{2}\right)T}{\sigma\sqrt{T}}$,\\
+	$d_{2} = \frac{\ln\!\left(\frac{S}{K}\right) + \left(r - \delta - \frac{\sigma^{2}}{2}\right)T}{\sigma\sqrt{T}}$\\
+	Put-Call Parity: $C - P = S_{0}e^{-\delta T} - Ke^{-rT}$\\
+	Implied Volatility: $\hat{\sigma}$ from BSM\\
+	$\text{VIX}^{2}$: risk-neutral variance
+	
+	\subsection*{Options [2]}
+	\underline{\textbf{Risk-neutral distribution:}} $\mathbb{Q}$\\
+	$\frac{\partial^{2} C}{\partial K^{2}} = e^{-rT}q\!\left(K\right)$\\
+	Grid of strikes $K_{1}, K_{2}, \dots$ with $\Delta K = K_{n+1} - K_{n}$ constant\\
+	$q\!\left(K_{n}\right)\approx e^{rT}\frac{C_{n+1} - 2C_{n} + C_{n-1}}{\left(\Delta K\right)^{2}}$\\
+	\underline{\textbf{Capital Structure:}}\\
+	Equity is call on asset struck at debt,\\
+	Debt plus equity call on asset struck at more senior debt, etc.\\
+	Prepayment options: use risk-neutral pricing.
+	
